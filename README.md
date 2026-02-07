@@ -27,18 +27,68 @@ A stable audio streaming system for macOS-to-iOS audio broadcasting, designed to
 - **Network**: Both devices must be on the same local network
 - **System Audio** (optional): [BlackHole](https://github.com/ExistentialAudio/BlackHole) virtual audio device for capturing system audio on macOS
 
+## Current Implementation Status
+
+✅ **Phase 1-3 Complete**: Core framework, macOS sender, and iOS receiver code implemented
+⚠️ **Xcode Projects**: Need to be created to build and run the apps
+
+See [IMPLEMENTATION_STATUS.md](IMPLEMENTATION_STATUS.md) for detailed status.
+
+## Building the Project
+
+### StableRadioCore (Shared Framework)
+
+The core framework builds successfully with Swift Package Manager:
+
+```bash
+cd StableRadioCore
+swift build
+swift test  # Run tests (when available)
+```
+
+### macOS and iOS Apps
+
+The macOS and iOS apps require Xcode projects to be created. The code is complete and organized, but needs proper `.xcodeproj` files.
+
+**Option 1: Create Xcode Projects Manually**
+
+1. Open Xcode
+2. Create New Project → App
+3. Add existing Swift files from `StableRadio-macOS/StableRadio-macOS/` or `StableRadio-iOS/StableRadio-iOS/`
+4. Add StableRadioCore as a local Swift Package dependency
+5. Configure Info.plist and entitlements
+6. Build and run
+
+**Option 2: Use the Package.swift** (partial support)
+
+```bash
+# macOS
+cd StableRadio-macOS
+swift build  # Will build executable but not create full app bundle
+
+# iOS
+cd StableRadio-iOS
+swift build  # Framework only, needs Xcode for iOS app
+```
+
+### Required Permissions
+
+**macOS (Info.plist)**:
+- `NSMicrophoneUsageDescription`: "StableRadio needs microphone access to capture audio"
+- `NSLocalNetworkUsageDescription`: "StableRadio needs network access to stream audio"
+
+**iOS (Info.plist)**:
+- `NSLocalNetworkUsageDescription`: "StableRadio needs network access to receive audio"
+- `UIBackgroundModes`: `audio` (for background playback)
+
 ## Installation
 
-### macOS App
+### Prerequisites
 
-1. Open `StableRadio-macOS/StableRadio-macOS.xcodeproj` in Xcode
-2. Build and run
-
-### iOS App
-
-1. Open `StableRadio-iOS/StableRadio-iOS.xcodeproj` in Xcode
-2. Select your iOS device or simulator
-3. Build and run
+- **macOS**: macOS 11 Big Sur or later, Xcode 13+
+- **iOS**: iOS 12 or later
+- **Network**: Both devices on same local network (WiFi)
+- **System Audio** (optional): [BlackHole](https://github.com/ExistentialAudio/BlackHole) for macOS system audio capture
 
 ## Usage
 
