@@ -56,7 +56,7 @@ public enum ChannelConfig: UInt16, Codable {
 }
 
 /// Complete transmission format configuration
-public struct TransmissionFormat: Codable, Equatable {
+public struct TransmissionFormat: Codable, Equatable, Hashable {
     public let sampleRate: SampleRate
     public let bitDepth: BitDepth
     public let channels: ChannelConfig
