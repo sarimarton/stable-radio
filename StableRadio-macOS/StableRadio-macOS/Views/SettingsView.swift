@@ -5,7 +5,7 @@ struct SettingsView: View {
 
     var body: some View {
         Form {
-            Section {
+            Section(header: Text("About")) {
                 HStack {
                     Text("Version:")
                     Spacer()
@@ -21,11 +21,7 @@ struct SettingsView: View {
                 }
             }
 
-            } header: {
-                Text("About")
-            }
-
-            Section {
+            Section(header: Text("Help")) {
                 Text("To capture system audio:")
                     .font(.headline)
 
@@ -38,8 +34,6 @@ struct SettingsView: View {
                 """)
                 .font(.caption)
                 .foregroundColor(.secondary)
-            } header: {
-                Text("Help")
             }
         }
         .padding()

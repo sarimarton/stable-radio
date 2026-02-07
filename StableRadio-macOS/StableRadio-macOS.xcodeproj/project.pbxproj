@@ -1,0 +1,419 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 70;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		15FE1F07BFBA964EE94FE601 /* StableRadioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF64180382976AE53FC2E90F /* StableRadioApp.swift */; };
+		181C525A7D50697843C275A3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62FB3C0CB7210954AB604AE /* MainView.swift */; };
+		21518568C6299CB493E83830 /* StreamBroadcaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52C21E013F67247BA940C11 /* StreamBroadcaster.swift */; };
+		28C0267499542481BDFEDF40 /* AudioCaptureEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E31877C147E2F875B1B8A6E /* AudioCaptureEngine.swift */; };
+		2F2143183A017F52B285388A /* AudioDeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A0F164178A438A54305639 /* AudioDeviceInfo.swift */; };
+		4753BB9ED10D2761DD08BF72 /* StableRadioCore in Frameworks */ = {isa = PBXBuildFile; productRef = 1435135576419C80C72C3EA6 /* StableRadioCore */; };
+		5BAF280087CFD6D474935155 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4072E083A7E895E5530DF523 /* MainViewModel.swift */; };
+		A120F06D5FE2479779516479 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC12E1E2C36EC149C25F7160 /* SettingsView.swift */; };
+		BE48700EA8BB39CB10178F01 /* AudioDeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761D66EE44E955A24450D801 /* AudioDeviceManager.swift */; };
+		C54F94B168BE01C46FD1999E /* ReceiverDiscovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6DC808BBCE96D56DEB7F56 /* ReceiverDiscovery.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4072E083A7E895E5530DF523 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		6E31877C147E2F875B1B8A6E /* AudioCaptureEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioCaptureEngine.swift; sourceTree = "<group>"; };
+		761D66EE44E955A24450D801 /* AudioDeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDeviceManager.swift; sourceTree = "<group>"; };
+		9F6DC808BBCE96D56DEB7F56 /* ReceiverDiscovery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverDiscovery.swift; sourceTree = "<group>"; };
+		A2CC46B6B1F27E414415D5EB /* StableRadio-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StableRadio-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B52C21E013F67247BA940C11 /* StreamBroadcaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamBroadcaster.swift; sourceTree = "<group>"; };
+		B62FB3C0CB7210954AB604AE /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		B89391E90EF669D35FD48701 /* StableRadioCore */ = {isa = PBXFileReference; lastKnownFileType = folder; name = StableRadioCore; path = ../StableRadioCore; sourceTree = SOURCE_ROOT; };
+		BF64180382976AE53FC2E90F /* StableRadioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StableRadioApp.swift; sourceTree = "<group>"; };
+		CC12E1E2C36EC149C25F7160 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		E6A0F164178A438A54305639 /* AudioDeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDeviceInfo.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9CFD09CF3C96E3AC94F7A719 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4753BB9ED10D2761DD08BF72 /* StableRadioCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B74ABAFC4D32A8C5EE3CFD4 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				B89391E90EF669D35FD48701 /* StableRadioCore */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		3BA9B94DE399815EA87FD4E0 /* StableRadio-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				BF64180382976AE53FC2E90F /* StableRadioApp.swift */,
+				C0685D08B2C7B454C50F9C8E /* AudioCapture */,
+				53843AF587A063625B7B5508 /* Discovery */,
+				40DD78BD2FADF40D6AAAADEC /* Models */,
+				CC76F6AD8976C24B371DA50A /* Network */,
+				EBEEF99236E2FCF23D747A5C /* ViewModels */,
+				6E99023C87A8F07138199CA3 /* Views */,
+			);
+			path = "StableRadio-macOS";
+			sourceTree = "<group>";
+		};
+		40DD78BD2FADF40D6AAAADEC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E6A0F164178A438A54305639 /* AudioDeviceInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		53843AF587A063625B7B5508 /* Discovery */ = {
+			isa = PBXGroup;
+			children = (
+				9F6DC808BBCE96D56DEB7F56 /* ReceiverDiscovery.swift */,
+			);
+			path = Discovery;
+			sourceTree = "<group>";
+		};
+		6E99023C87A8F07138199CA3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B62FB3C0CB7210954AB604AE /* MainView.swift */,
+				CC12E1E2C36EC149C25F7160 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C0685D08B2C7B454C50F9C8E /* AudioCapture */ = {
+			isa = PBXGroup;
+			children = (
+				6E31877C147E2F875B1B8A6E /* AudioCaptureEngine.swift */,
+				761D66EE44E955A24450D801 /* AudioDeviceManager.swift */,
+			);
+			path = AudioCapture;
+			sourceTree = "<group>";
+		};
+		CC76F6AD8976C24B371DA50A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B52C21E013F67247BA940C11 /* StreamBroadcaster.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		EBEEF99236E2FCF23D747A5C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4072E083A7E895E5530DF523 /* MainViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F62B1B8370CE18FFA0B0E4AF = {
+			isa = PBXGroup;
+			children = (
+				3B74ABAFC4D32A8C5EE3CFD4 /* Packages */,
+				3BA9B94DE399815EA87FD4E0 /* StableRadio-macOS */,
+				FD9C34AC9DAC5C7BBE7DD725 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FD9C34AC9DAC5C7BBE7DD725 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2CC46B6B1F27E414415D5EB /* StableRadio-macOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B5A79D081FAD88BC69D69962 /* StableRadio-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F7D17CFDCE15A23C82B633C /* Build configuration list for PBXNativeTarget "StableRadio-macOS" */;
+			buildPhases = (
+				FD39F73209106BC57D0E40A4 /* Sources */,
+				9CFD09CF3C96E3AC94F7A719 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "StableRadio-macOS";
+			packageProductDependencies = (
+				1435135576419C80C72C3EA6 /* StableRadioCore */,
+			);
+			productName = "StableRadio-macOS";
+			productReference = A2CC46B6B1F27E414415D5EB /* StableRadio-macOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		39E166A802421C068E98647B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					B5A79D081FAD88BC69D69962 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 20B143658A61CB3C1140DEA4 /* Build configuration list for PBXProject "StableRadio-macOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = F62B1B8370CE18FFA0B0E4AF;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				672560F6BCDC4E50059D4D8C /* XCLocalSwiftPackageReference "../StableRadioCore" */,
+			);
+			preferredProjectObjectVersion = 70;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B5A79D081FAD88BC69D69962 /* StableRadio-macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FD39F73209106BC57D0E40A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28C0267499542481BDFEDF40 /* AudioCaptureEngine.swift in Sources */,
+				2F2143183A017F52B285388A /* AudioDeviceInfo.swift in Sources */,
+				BE48700EA8BB39CB10178F01 /* AudioDeviceManager.swift in Sources */,
+				181C525A7D50697843C275A3 /* MainView.swift in Sources */,
+				5BAF280087CFD6D474935155 /* MainViewModel.swift in Sources */,
+				C54F94B168BE01C46FD1999E /* ReceiverDiscovery.swift in Sources */,
+				A120F06D5FE2479779516479 /* SettingsView.swift in Sources */,
+				15FE1F07BFBA964EE94FE601 /* StableRadioApp.swift in Sources */,
+				21518568C6299CB493E83830 /* StreamBroadcaster.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		32CE0885FD04FFE76E21B08D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3390D3495420756DC6CB0B82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stableradio.macos;
+				PRODUCT_NAME = StableRadio;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.5;
+			};
+			name = Release;
+		};
+		97E469B03E26A54DCB155075 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stableradio.macos;
+				PRODUCT_NAME = StableRadio;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.5;
+			};
+			name = Debug;
+		};
+		FAC95A5843F8DE65B82696C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		20B143658A61CB3C1140DEA4 /* Build configuration list for PBXProject "StableRadio-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32CE0885FD04FFE76E21B08D /* Debug */,
+				FAC95A5843F8DE65B82696C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		2F7D17CFDCE15A23C82B633C /* Build configuration list for PBXNativeTarget "StableRadio-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97E469B03E26A54DCB155075 /* Debug */,
+				3390D3495420756DC6CB0B82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		672560F6BCDC4E50059D4D8C /* XCLocalSwiftPackageReference "../StableRadioCore" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../StableRadioCore;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1435135576419C80C72C3EA6 /* StableRadioCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = StableRadioCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 39E166A802421C068E98647B /* Project object */;
+}

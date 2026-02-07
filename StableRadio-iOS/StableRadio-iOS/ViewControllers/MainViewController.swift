@@ -22,7 +22,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
 
         title = "StableRadio Receiver"
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .white
 
         setupUI()
         setupViewModel()
@@ -66,7 +66,7 @@ class MainViewController: UIViewController {
         stack.axis = .vertical
         stack.spacing = 12
         stack.layer.cornerRadius = 8
-        stack.backgroundColor = .secondarySystemBackground
+        stack.backgroundColor = UIColor(white: 0.95, alpha: 1.0)
         stack.layoutMargins = UIEdgeInsets(top: 12, left: 12, bottom: 12, right: 12)
         stack.isLayoutMarginsRelativeArrangement = true
 
@@ -105,19 +105,19 @@ class MainViewController: UIViewController {
         // Format label
         formatLabel.text = "Format: --"
         formatLabel.font = .systemFont(ofSize: 12)
-        formatLabel.textColor = .secondaryLabel
+        formatLabel.textColor = .gray
         stack.addArrangedSubview(formatLabel)
 
         // Bandwidth label
         bandwidthLabel.text = "Bandwidth: -- kbps"
         bandwidthLabel.font = .systemFont(ofSize: 12)
-        bandwidthLabel.textColor = .secondaryLabel
+        bandwidthLabel.textColor = .gray
         stack.addArrangedSubview(bandwidthLabel)
 
         // Latency label
         latencyLabel.text = "Latency: -- ms"
         latencyLabel.font = .systemFont(ofSize: 12)
-        latencyLabel.textColor = .secondaryLabel
+        latencyLabel.textColor = .gray
         stack.addArrangedSubview(latencyLabel)
 
         return stack

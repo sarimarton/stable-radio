@@ -17,9 +17,10 @@ class SenderCell: UITableViewCell {
     }
 
     private func setupUI() {
-        // Icon
-        iconView.image = UIImage(systemName: "desktopcomputer")
-        iconView.tintColor = .systemBlue
+        // Icon (iOS 12 compatible - use a simple colored view)
+        iconView.image = nil
+        iconView.backgroundColor = .systemBlue
+        iconView.layer.cornerRadius = 4
         iconView.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(iconView)
 
@@ -30,7 +31,7 @@ class SenderCell: UITableViewCell {
 
         // Address label
         addressLabel.font = .systemFont(ofSize: 12)
-        addressLabel.textColor = .secondaryLabel
+        addressLabel.textColor = .gray
         addressLabel.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(addressLabel)
 

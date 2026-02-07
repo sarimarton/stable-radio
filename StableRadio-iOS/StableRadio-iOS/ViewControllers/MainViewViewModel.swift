@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 import StableRadioCore
 
 /// View model for main view controller
@@ -164,12 +165,12 @@ class MainViewViewModel {
     }
 
     private func feedAudioData() {
-        guard let buffer = adaptiveBuffer,
+        guard let _ = adaptiveBuffer,
               let playback = audioPlayback else { return }
 
         // Feed multiple buffers
         for _ in 0..<3 {
-            if let audioData = buffer.readAudioData(frameCount: 4096) {
+            if let audioData = adaptiveBuffer?.readAudioData(frameCount: 4096) {
                 playback.scheduleAudioData(audioData)
             } else {
                 break
@@ -177,7 +178,7 @@ class MainViewViewModel {
         }
 
         // Check if buffer is too low
-        if buffer.shouldPausePlayback {
+        if adaptiveBuffer?.shouldPausePlayback == true {
             audioPlayback?.stop()
             onStatusChanged?("Buffering...")
         }
